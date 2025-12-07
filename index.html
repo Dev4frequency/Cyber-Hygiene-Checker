@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassMeter - Modern Password Strength Analyzer</title>
+    <meta name="description" content="PassMeter - Professional password strength analyzer with entropy calculation, pattern detection, and security recommendations.">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=3.0">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🔐 PassMeter</h1>
+            <p>Modern password strength analyzer with entropy calculation & pattern detection</p>
+        </header>
+        
+        <section class="password-section" role="main" aria-label="Password input and strength analysis">
+            <div class="input-group">
+                <label for="password">Enter Password:</label>
+                <div class="password-input-wrapper">
+                    <input 
+                        type="password" 
+                        id="password" 
+                        placeholder="Type your password here..."
+                        aria-describedby="strength-feedback"
+                        autocomplete="new-password"
+                        spellcheck="false"
+                        autocorrect="off"
+                        autocapitalize="off"
+                    >
+                    <button 
+                        type="button" 
+                        id="toggleVisibility" 
+                        class="toggle-btn"
+                        aria-label="Toggle password visibility"
+                        title="Show/hide password"
+                    >👁️</button>
+                </div>
+            </div>
+            
+            <div class="strength-meter" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="strength-bar" aria-hidden="true">
+                    <div id="strengthProgress" class="strength-progress"></div>
+                </div>
+                <div class="strength-label">
+                    <span id="strengthText" aria-live="polite">Enter a password</span>
+                    <span id="strengthScore" aria-label="Password strength score"></span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="analysis-section" aria-label="Password analysis results">
+            <div class="metrics-grid" role="grid" aria-label="Password strength metrics">
+                <article class="metric-card" role="gridcell">
+                    <h3>Entropy</h3>
+                    <div class="metric-value" id="entropy" aria-label="Entropy bits">0 bits</div>
+                    <div class="metric-description">Randomness measure</div>
+                </article>
+                
+                <article class="metric-card" role="gridcell">
+                    <h3>Length</h3>
+                    <div class="metric-value" id="length" aria-label="Character count">0 chars</div>
+                    <div class="metric-description">Character count</div>
+                </article>
+                
+                <article class="metric-card" role="gridcell">
+                    <h3>Character Sets</h3>
+                    <div class="metric-value" id="charSets" aria-label="Character variety count">0</div>
+                    <div class="metric-description">Variety types used</div>
+                </article>
+                
+                <article class="metric-card" role="gridcell">
+                    <h3>Time to Crack</h3>
+                    <div class="metric-value" id="crackTime" aria-label="Estimated crack time">Instant</div>
+                    <div class="metric-description">Estimated brute force</div>
+                </article>
+            </div>
+            
+            <section class="feedback-section" aria-label="Security feedback">
+                <h3>Security Analysis</h3>
+                <div id="feedback" class="feedback-list" role="list" aria-live="polite" aria-atomic="false">
+                    <div class="feedback-item neutral" role="listitem">
+                        <span class="feedback-icon" aria-hidden="true">ℹ️</span>
+                        <span>Enter a password to see detailed analysis</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="patterns-section" aria-label="Pattern detection results">
+                <h3>Pattern Detection</h3>
+                <div id="patterns" class="patterns-list" role="list" aria-live="polite">
+                    <div class="pattern-item" role="listitem">
+                        <span class="pattern-name">Common Patterns:</span>
+                        <span class="pattern-status">None detected</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+        
+        <footer class="tips-section" role="contentinfo" aria-label="Password security tips">
+            <h3>💡 Password Security Tips</h3>
+            <ul class="tips-list" role="list">
+                <li role="listitem">Use at least 12 characters for better security</li>
+                <li role="listitem">Mix uppercase, lowercase, numbers, and symbols</li>
+                <li role="listitem">Avoid common words and personal information</li>
+                <li role="listitem">Don't use predictable patterns or sequences</li>
+                <li role="listitem">Consider using a passphrase with random words</li>
+                <li role="listitem">Use unique passwords for different accounts</li>
+            </ul>
+        </footer>
+    </div>
+    
+    <script src="password-strength.js"></script>
+</body>
+</html>

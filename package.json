@@ -1,0 +1,66 @@
+{
+  "name": "password-strength-meter",
+  "version": "2.0.0",
+  "description": "PassMeter - Professional password strength analyzer with modern glassmorphism UI, advanced entropy calculation, pattern detection, and comprehensive security analysis",
+  "main": "app.py",
+  "homepage": "https://github.com/twmiles/passmeter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twmiles/passmeter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/twmiles/passmeter/issues"
+  },
+  "scripts": {
+    "start": "python app.py",
+    "dev": "python app.py",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "password",
+    "security",
+    "entropy",
+    "strength",
+    "validation",
+    "glassmorphism",
+    "ui",
+    "pattern-detection",
+    "flask",
+    "python",
+    "javascript",
+    "accessibility",
+    "responsive-design",
+    "modern-ui"
+  ],
+  "author": {
+    "name": "Tracy Miles",
+    "url": "https://github.com/twmiles"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "express-rate-limit": "^6.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "python": ">=3.8.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "files": [
+    "app.py",
+    "index.html",
+    "styles.css",
+    "password-strength.js",
+    "requirements.txt",
+    "README.md",
+    "LICENSE"
+  ]
+}
