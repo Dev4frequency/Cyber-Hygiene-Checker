@@ -83,4 +83,4 @@ PassMeter was created to provide a modern, accessible tool for password security
 ---
 
 **Cyber Hygiene Checker** - Making password security beautiful and accessible
-<em>Built with RESPECT BY YASH BISHT for better password security</em>
+<em>Built with Respect by --YASH BISHT-- for better password security</em>
